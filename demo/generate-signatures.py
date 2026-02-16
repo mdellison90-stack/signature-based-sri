@@ -31,7 +31,7 @@ def ed25519_signature(private_public_key, content):
 Generate private + public key pair for ed25519 signatures.
 '''
 def ed25519_key_pair():
-  secret_key = bytes([randint(0, 255) for _ in range(0,32)])
+  secret_key = bytes([randint(0, 255) for _ in range(32)])
   public_key = ed25519.publickey(secret_key)
   return (secret_key, public_key)
 
